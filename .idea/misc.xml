@@ -3,9 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/ic_info_24.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.143" />
+        <entry key="app/src/main/res/drawable/ic_logo_background.xml" value="0.143" />
+        <entry key="app/src/main/res/font-v26/moderna.xml" value="0.2722222222222222" />
+        <entry key="app/src/main/res/font/moderna.xml" value="0.2722222222222222" />
+        <entry key="app/src/main/res/font/monoround.xml" value="0.153125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.21603260869565216" />
         <entry key="app/src/main/res/layout/line_adapter_home.xml" value="0.21603260869565216" />
+        <entry key="app/src/main/res/menu/menu_items.xml" value="0.16822916666666668" />
       </map>
     </option>
   </component>
