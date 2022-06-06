@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
 import com.example.matematic.R;
 import com.google.android.material.button.MaterialButton;
 import java.util.ArrayList;
@@ -47,8 +49,17 @@ public class HomeAdapter extends BaseAdapter {
         MaterialButton btn = themesLay.findViewById(R.id.btnTitle);
         String title = this.listThemesTitles.get(i);
         btn.setText(title);
-
         themesLay.setTag(i);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String title = btn.getText().toString();
+                Toast.makeText(btn.getContext(), title, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         return themesLay;
     }
+
 }
