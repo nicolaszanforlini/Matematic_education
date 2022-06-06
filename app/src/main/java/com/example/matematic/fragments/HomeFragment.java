@@ -82,6 +82,10 @@ public class HomeFragment extends Fragment {
     private void initListThemesTitles() {
         this.listThemesTitles.add("Pythagoras lengths");
         this.listThemesTitles.add("Pythagoras angles");
+        this.listThemesTitles.add("Al'Kashi");
+        this.listThemesTitles.add("area square");
+        this.listThemesTitles.add("area circle");
+        this.listThemesTitles.add("area triangle");
     }
 
 }
