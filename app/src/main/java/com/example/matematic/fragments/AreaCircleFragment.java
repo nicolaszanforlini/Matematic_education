@@ -7,7 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import com.example.matematic.CalculArea;
 import com.example.matematic.R;
 import com.google.android.material.button.MaterialButton;
 
@@ -63,6 +66,32 @@ public class AreaCircleFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_area_circle, container, false);
+
+        EditText editText = rootView.findViewById(R.id.inputRadius);
+        TextView textView = rootView.findViewById(R.id.txtResult);
+        CalculArea calculArea = new CalculArea();
+
+        MaterialButton btnCalcul = rootView.findViewById(R.id.btnCalcul);
+        btnCalcul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    float res = calculArea.areaCircle(editText.getText().toString());
+                    textView.setText(String.valueOf(res));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        MaterialButton btnReset = rootView.findViewById(R.id.btnReset);
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView.setText("0");
+                editText.setText("0");
+            }
+        });
 
         MaterialButton btnHome = rootView.findViewById(R.id.btnHome);
         btnHome.setOnClickListener(new View.OnClickListener() {

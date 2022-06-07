@@ -101,7 +101,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtReult"
+            android:id="@+id/txtResult"
             android:textSize="20sp"
             android:hint="0"
             android:textStyle="bold"
@@ -109,11 +109,44 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/layoutCalcul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layoutResult"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalcul"
+            android:text="Calcule"
+            android:layout_marginRight="10dp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/blue_formule"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnReset"
+            android:layout_marginLeft="10dp"
+            android:text="Reset"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/blue_formule"
+            />
+
+
+    </LinearLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layoutResult"
+        android:layout_below="@+id/layoutCalcul"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/purple_pink"
