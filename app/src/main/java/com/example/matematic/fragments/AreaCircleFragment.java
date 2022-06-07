@@ -7,23 +7,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
-import android.widget.ListView;
 
 import com.example.matematic.R;
-import com.example.matematic.adapters.HomeAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.material.button.MaterialButton;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
+ * Use the {@link AreaCircleFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
-
-    private List<String> listThemesTitles = new ArrayList<>();
+public class AreaCircleFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +27,7 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public HomeFragment() {
+    public AreaCircleFragment() {
         // Required empty public constructor
     }
 
@@ -44,11 +37,11 @@ public class HomeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
+     * @return A new instance of fragment AreaCircleFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static AreaCircleFragment newInstance(String param1, String param2) {
+        AreaCircleFragment fragment = new AreaCircleFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,22 +62,19 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        initListThemesTitles();
+        View rootView = inflater.inflate(R.layout.fragment_area_circle, container, false);
 
-        ListView listView = rootView.findViewById(R.id.HomeListView);
-        HomeAdapter homeAdapter = new HomeAdapter(getContext(), this.listThemesTitles, getActivity());
-        listView.setAdapter(homeAdapter);
+        MaterialButton btnHome = rootView.findViewById(R.id.btnHome);
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().
+                        remove(getActivity().getSupportFragmentManager().findFragmentById(R.id.frame)).commit();
+                HomeFragment frag = new HomeFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame, frag).commit();
+            }
+        });
 
         return rootView;
     }
-
-    private void initListThemesTitles() {
-        this.listThemesTitles.add("Pythagore");
-        this.listThemesTitles.add("Al'Kashi");
-        this.listThemesTitles.add("aire d'un carré");
-        this.listThemesTitles.add("aire d'un cercle");
-        this.listThemesTitles.add("aire d'un triangle");
-    }
-
 }
