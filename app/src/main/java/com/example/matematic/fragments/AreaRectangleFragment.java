@@ -104,8 +104,8 @@ public class AreaRectangleFragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction().add(R.id.frame, frag).commit();
             }
         });
+    // test
 
-        
         return rootView;
     }
 }
