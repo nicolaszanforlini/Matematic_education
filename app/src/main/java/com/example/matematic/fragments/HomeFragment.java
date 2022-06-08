@@ -82,6 +82,7 @@ public class HomeFragment extends Fragment {
     private void initListThemesTitles() {
         this.listThemesTitles.add("Pythagore");
         this.listThemesTitles.add("Al'Kashi");
+        this.listThemesTitles.add("Thales");
         this.listThemesTitles.add("aire d'un carré");
         this.listThemesTitles.add("aire d'un cercle");
         this.listThemesTitles.add("aire d'un triangle");
