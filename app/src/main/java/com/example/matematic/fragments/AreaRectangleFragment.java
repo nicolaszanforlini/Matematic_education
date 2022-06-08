@@ -16,10 +16,10 @@ import com.google.android.material.button.MaterialButton;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AreaSquareFragment#newInstance} factory method to
+ * Use the {@link AreaRectangleFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AreaSquareFragment extends Fragment {
+public class AreaRectangleFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +30,7 @@ public class AreaSquareFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public AreaSquareFragment() {
+    public AreaRectangleFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class AreaSquareFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment AreaShapeFragment.
+     * @return A new instance of fragment AreaRectangleFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AreaSquareFragment newInstance(String param1, String param2) {
-        AreaSquareFragment fragment = new AreaSquareFragment();
+    public static AreaRectangleFragment newInstance(String param1, String param2) {
+        AreaRectangleFragment fragment = new AreaRectangleFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,10 +64,10 @@ public class AreaSquareFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_area_rectangle, container, false);
 
-        View rootView = inflater.inflate(R.layout.fragment_area_square, container, false);
-
-        EditText editText = rootView.findViewById(R.id.inputSide);
+        EditText editTextB = rootView.findViewById(R.id.inputB);
+        EditText editTextA = rootView.findViewById(R.id.inputA);
         TextView textView = rootView.findViewById(R.id.txtResult);
         CalculArea calculArea = new CalculArea();
 
@@ -76,7 +76,7 @@ public class AreaSquareFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    calculArea.areaSquare(editText.getText().toString());
+                    calculArea.areaRectangle(editTextB.getText().toString(), editTextA.getText().toString());
                     textView.setText(String.valueOf(calculArea.getResult()));
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -89,7 +89,8 @@ public class AreaSquareFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 textView.setText("0");
-                editText.setText("0");
+                editTextB.setText("0");
+                editTextA.setText("0");
             }
         });
 

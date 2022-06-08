@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.example.matematic.R;
 import com.example.matematic.fragments.AreaCircleFragment;
+import com.example.matematic.fragments.AreaRectangleFragment;
 import com.example.matematic.fragments.AreaSquareFragment;
 import com.example.matematic.fragments.HomeFragment;
 import com.google.android.material.button.MaterialButton;
@@ -73,6 +74,11 @@ public class HomeAdapter extends BaseAdapter {
                     activity.getSupportFragmentManager().beginTransaction().
                             remove(activity.getSupportFragmentManager().findFragmentById(R.id.frame)).commit();
                     AreaSquareFragment frag = new AreaSquareFragment();
+                    activity.getSupportFragmentManager().beginTransaction().add(R.id.frame, frag).commit();
+                }else if(title.equals("aire d'un rectangle")) {
+                    activity.getSupportFragmentManager().beginTransaction().
+                            remove(activity.getSupportFragmentManager().findFragmentById(R.id.frame)).commit();
+                    AreaRectangleFragment frag = new AreaRectangleFragment();
                     activity.getSupportFragmentManager().beginTransaction().add(R.id.frame, frag).commit();
                 }
             }

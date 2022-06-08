@@ -2,18 +2,26 @@ package com.example.matematic;
 
 public class CalculArea {
 
-    public float areaCircle(String radius) {
-        float r = Float.parseFloat(radius);
-        float result = 0;
-        float pi = (float) 3.141592653589793;
-        result = r * r * pi;
-        return result;
+    private float result;
+
+    public float getResult() {
+        return this.result;
     }
 
-    public float areaSquare(String side) {
+    public void areaCircle(String radius) {
+        float r = Float.parseFloat(radius);
+        float pi = (float) 3.141592653589793;
+        this.result = r * r * pi;
+    }
+
+    public void areaSquare(String side) {
         float s = Float.parseFloat(side);
-        float result = 0;
-        result = s * s;
-        return result;
+        this.result = s * s;
+    }
+
+    public void areaRectangle(String length, String height) {
+        float b = Float.parseFloat(length);
+        float a = Float.parseFloat(height);
+        this.result = b * a;
     }
 }

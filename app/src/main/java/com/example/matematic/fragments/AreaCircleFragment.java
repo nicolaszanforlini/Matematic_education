@@ -76,8 +76,8 @@ public class AreaCircleFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
-                    float res = calculArea.areaCircle(editText.getText().toString());
-                    textView.setText(String.valueOf(res)+" cm3");
+                    calculArea.areaCircle(editText.getText().toString());
+                    textView.setText(String.valueOf(calculArea.getResult()));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
