@@ -85,6 +85,7 @@ public class HomeFragment extends Fragment {
         this.listThemesTitles.add("Thales");
         this.listThemesTitles.add("aire d'un carré");
         this.listThemesTitles.add("aire d'un cercle");
+        this.listThemesTitles.add("aire d'un rectangle");
         this.listThemesTitles.add("aire d'un triangle");
     }
 

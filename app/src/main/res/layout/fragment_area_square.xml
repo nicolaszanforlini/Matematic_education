@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AreaSquareFragment">
+
+    <TextView
+        android:textSize="20sp"
+        android:id="@+id/txtSquareTitle"
+        android:textColor="@color/purple_pink"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="l'aire ou la surface d'un carré est égale au côté multiplier par côté."
+        android:fontFamily="@font/monoround"
+        />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imgShape"
+        android:layout_below="@+id/txtSquareTitle"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/img_shape"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtFormuleShape"
+        android:layout_below="@id/imgShape"
+        android:layout_marginTop="15dp"
+        android:text="Formule :  c x c"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/blue_formule"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/layoutlblInputS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtFormuleShape"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblSideShape"
+            android:text="Entrer le côté du carré : "
+            android:textSize="20sp"
+            android:textColor="@color/blue_formule"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:focusedByDefault="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/inputSide"
+            android:hint="0"
+            android:background="@drawable/border_input"
+            android:textStyle="bold"
+            tools:ignore="Autofill" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layoutlblInputS"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblResult"
+            android:text="Résultat : "
+            android:textSize="20sp"
+            android:textColor="@color/blue_formule"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtResult"
+            android:textSize="20sp"
+            android:hint="0"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCalcul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layoutResult"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalcul"
+            android:text="Calcule"
+            android:layout_marginRight="10dp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/blue_formule"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnReset"
+            android:layout_marginLeft="10dp"
+            android:text="Reset"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/blue_formule"
+            />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutCalcul"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/purple_pink"
+        android:textAllCaps="false"
+        android:text="Accueil" />
+
+</RelativeLayout>
