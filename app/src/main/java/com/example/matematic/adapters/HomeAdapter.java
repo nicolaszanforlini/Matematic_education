@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.example.matematic.R;
 import com.example.matematic.fragments.AreaCircleFragment;
+import com.example.matematic.fragments.AreaSquareFragment;
 import com.example.matematic.fragments.HomeFragment;
 import com.google.android.material.button.MaterialButton;
 import java.util.ArrayList;
@@ -62,12 +63,16 @@ public class HomeAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 String title = btn.getText().toString();
-                Toast.makeText(btn.getContext(), title, Toast.LENGTH_SHORT).show();
 
                 if(title.equals("aire d'un cercle")) {
                     activity.getSupportFragmentManager().beginTransaction().
                             remove(activity.getSupportFragmentManager().findFragmentById(R.id.frame)).commit();
                     AreaCircleFragment frag = new AreaCircleFragment();
+                    activity.getSupportFragmentManager().beginTransaction().add(R.id.frame, frag).commit();
+                } else if(title.equals("aire d'un carré")) {
+                    activity.getSupportFragmentManager().beginTransaction().
+                            remove(activity.getSupportFragmentManager().findFragmentById(R.id.frame)).commit();
+                    AreaSquareFragment frag = new AreaSquareFragment();
                     activity.getSupportFragmentManager().beginTransaction().add(R.id.frame, frag).commit();
                 }
             }

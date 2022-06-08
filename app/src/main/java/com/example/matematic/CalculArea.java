@@ -9,4 +9,11 @@ public class CalculArea {
         result = r * r * pi;
         return result;
     }
+
+    public float areaSquare(String side) {
+        float s = Float.parseFloat(side);
+        float result = 0;
+        result = s * s;
+        return result;
+    }
 }
