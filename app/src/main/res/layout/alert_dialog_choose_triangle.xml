@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_dialbox"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearDialBoxChooseTriangle"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Triangle rectangle"
+            android:backgroundTint="@color/purple_pink"
+            android:id="@+id/btnChooseTriangleRectangle"
+            android:layout_gravity="center"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Triangle isocèle"
+            android:backgroundTint="@color/purple_pink"
+            android:id="@+id/btnChooseTriangleIsocele"
+            android:layout_gravity="center"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Triangle équilatéral"
+            android:backgroundTint="@color/purple_pink"
+            android:id="@+id/btnChooseTriangleEquilateral"
+            android:layout_gravity="center"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Triangle quelconque"
+            android:backgroundTint="@color/purple_pink"
+            android:id="@+id/btnChooseTriangleQuelconque"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

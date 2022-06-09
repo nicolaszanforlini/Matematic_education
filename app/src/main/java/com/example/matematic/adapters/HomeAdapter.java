@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.matematic.R;
@@ -80,6 +81,9 @@ public class HomeAdapter extends BaseAdapter {
                             remove(activity.getSupportFragmentManager().findFragmentById(R.id.frame)).commit();
                     AreaRectangleFragment frag = new AreaRectangleFragment();
                     activity.getSupportFragmentManager().beginTransaction().add(R.id.frame, frag).commit();
+                } else if(title.equals("aire d'un triangle")) {
+                    AlertDialog alert = new AlertDialog.Builder( context ).setView( R.layout.alert_dialog_choose_triangle).create();
+                    alert.show();
                 }
             }
         });
