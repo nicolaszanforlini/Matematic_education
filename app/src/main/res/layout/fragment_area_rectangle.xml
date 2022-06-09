@@ -15,7 +15,7 @@
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="l'aire ou la surface d'un rectangle est égale à la longueur multiplier par la hauteur"
+        android:text="l'aire ou la surface d'un rectangle est égale à la longueur multiplier par la largeur"
         android:fontFamily="@font/monoround"
         />
 

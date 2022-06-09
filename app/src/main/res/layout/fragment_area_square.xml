@@ -26,7 +26,7 @@
         android:layout_below="@+id/txtSquareTitle"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/img_shape"
+        android:src="@mipmap/img_square"
         tools:ignore="ContentDescription" />
 
     <TextView

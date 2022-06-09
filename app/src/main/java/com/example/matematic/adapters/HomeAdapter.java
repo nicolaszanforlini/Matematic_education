@@ -75,7 +75,7 @@ public class HomeAdapter extends BaseAdapter {
                             remove(activity.getSupportFragmentManager().findFragmentById(R.id.frame)).commit();
                     AreaSquareFragment frag = new AreaSquareFragment();
                     activity.getSupportFragmentManager().beginTransaction().add(R.id.frame, frag).commit();
-                }else if(title.equals("aire d'un rectangle")) {
+                } else if(title.equals("aire d'un rectangle")) {
                     activity.getSupportFragmentManager().beginTransaction().
                             remove(activity.getSupportFragmentManager().findFragmentById(R.id.frame)).commit();
                     AreaRectangleFragment frag = new AreaRectangleFragment();
