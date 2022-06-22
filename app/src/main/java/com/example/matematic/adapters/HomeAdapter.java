@@ -22,6 +22,8 @@ import com.google.android.material.button.MaterialButton;
 import java.util.ArrayList;
 import java.util.List;
 
+
+// mon commentaire
 public class HomeAdapter extends BaseAdapter {
 
     private List<String> listThemesTitles = new ArrayList<>();
@@ -34,6 +36,9 @@ public class HomeAdapter extends BaseAdapter {
         this.context = c;
         this.activity = a;
         this.themesInf=LayoutInflater.from( c );
+
+
+
     }
 
     @Override

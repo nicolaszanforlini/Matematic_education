@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Triangle rectangle"
-            android:backgroundTint="@color/purple_pink"
+            android:backgroundTint="@color/red_dark"
             android:id="@+id/btnChooseTriangleRectangle"
             android:layout_gravity="center"
             />
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Triangle isocèle"
-            android:backgroundTint="@color/purple_pink"
+            android:backgroundTint="@color/red_dark"
             android:id="@+id/btnChooseTriangleIsocele"
             android:layout_gravity="center"
             />
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Triangle équilatéral"
-            android:backgroundTint="@color/purple_pink"
+            android:backgroundTint="@color/red_dark"
             android:id="@+id/btnChooseTriangleEquilateral"
             android:layout_gravity="center"
             />
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Triangle quelconque"
-            android:backgroundTint="@color/purple_pink"
+            android:backgroundTint="@color/red_dark"
             android:id="@+id/btnChooseTriangleQuelconque"
             android:layout_gravity="center"
             />
